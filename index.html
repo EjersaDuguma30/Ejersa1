@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LUXORA — 3D Hotel Experience</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="loader"><div class="loader-logo">LUXORA</div><div class="loader-sub">INITIALIZING THE HOTEL</div><div class="loader-bar"><i></i></div></div>
+
+<header class="nav">
+<a class="brand" href="#home">LUX<span>ORA</span></a>
+<nav><a href="#home">Home</a><a href="#lobby">Lobby</a><a href="#rooms">Rooms</a><a href="#dining">Dining</a><a href="#contact">Contact</a></nav>
+<button class="book" onclick="document.querySelector('#booking').scrollIntoView({behavior:'smooth'})">Book a stay</button>
+<button class="hamb" aria-label="menu">☰</button>
+</header>
+
+<main>
+<section id="home" class="hero">
+<div id="hero3d"></div><div class="hero-shade"></div>
+<div class="hero-copy">
+<p class="eyebrow">A NEW STANDARD OF HOSPITALITY</p>
+<h1>Step inside<br><em>extraordinary.</em></h1>
+<p>Explore a cinematic 3D hotel world, then discover rooms, dining and experiences designed around you.</p>
+<div class="actions"><button class="primary" id="enterLobby">Enter the lobby <b>↗</b></button><a href="#rooms">Explore rooms ↓</a></div>
+</div>
+<div class="controls"><span>DRAG TO ROTATE</span><span>SCROLL TO ZOOM</span><span>CLICK THE HOTEL</span></div>
+<div class="hero-label"><b>01</b><small>/ 05</small></div>
+</section>
+
+<section id="lobby" class="immersive">
+<div class="section-label">01 / THE LOBBY</div>
+<div class="immersive-grid">
+<div class="lobby-copy"><p class="eyebrow dark">WALK THROUGH THE EXPERIENCE</p><h2>Your stay<br>starts <em>here.</em></h2><p>Our interactive lobby is built as a real-time 3D scene. Orbit the camera, zoom in, and click the glowing hotspots to explore the reception, lounge and rooftop.</p>
+<div class="hotspot-list"><button data-focus="reception">01 Reception</button><button data-focus="lounge">02 Lounge</button><button data-focus="pool">03 Rooftop</button></div></div>
+<div class="scene-wrap"><div id="lobby3d"></div><div class="scene-tip">DRAG · ZOOM · EXPLORE</div></div>
+</div>
+</section>
+
+<section id="rooms" class="rooms">
+<div class="section-label">02 / STAY</div><div class="head"><h2>Rooms with<br><em>a point of view.</em></h2><p>Quiet materials, natural light and thoughtful details. Every room is designed to feel like a private retreat.</p></div>
+<div class="cards">
+<article><div class="photo p1"></div><div class="card-info"><div><h3>Panorama Suite</h3><p>King · 52 m² · City view</p></div><strong>€320 <small>/ night</small></strong></div></article>
+<article><div class="photo p2"></div><div class="card-info"><div><h3>Signature Loft</h3><p>King · 68 m² · Living room</p></div><strong>€410 <small>/ night</small></strong></div></article>
+<article><div class="photo p3"></div><div class="card-info"><div><h3>Garden Residence</h3><p>King · 85 m² · Private terrace</p></div><strong>€520 <small>/ night</small></strong></div></article>
+</div>
+</section>
+
+<section id="dining" class="dark-section">
+<div class="dark-image"></div><div class="dark-copy"><div class="section-label">03 / TASTE</div><p class="eyebrow">FROM MORNING TO MIDNIGHT</p><h2>Good food.<br><em>Great company.</em></h2><p>Terra Restaurant celebrates seasonal ingredients while Sky Bar turns sunset into an occasion.</p><div class="pills"><span>TERRA RESTAURANT</span><span>SKY BAR</span><span>PRIVATE DINING</span></div></div>
+</section>
+
+<section class="experiences"><div class="section-label">04 / EXPERIENCE</div><h2>Slow down.<br><em>Stay awhile.</em></h2><div class="experience-grid"><div><span>01</span><h3>Rooftop Pool</h3><p>Sunrise swims and panoramic city views.</p></div><div><span>02</span><h3>Wellness Studio</h3><p>Quiet spaces for movement and restoration.</p></div><div><span>03</span><h3>City Concierge</h3><p>Private routes built around your interests.</p></div></div></section>
+
+<section id="booking" class="booking"><div><p class="eyebrow">YOUR NEXT ESCAPE</p><h2>Make room for<br><em>something beautiful.</em></h2></div><div class="booking-box"><label>CHECK IN<input type="date"></label><label>CHECK OUT<input type="date"></label><label>GUESTS<select><option>2 Adults</option><option>1 Adult</option><option>3 Adults</option><option>2 Adults + 1 Child</option></select></label><button id="check">Check availability →</button></div></section>
+</main>
+
+<footer id="contact"><div><a class="brand">LUX<span>ORA</span></a><p>Stay curious. Stay awhile.</p></div><div><b>Explore</b><a href="#lobby">Lobby</a><a href="#rooms">Rooms</a><a href="#dining">Dining</a></div><div><b>Contact</b><p>hello@luxora.example</p><p>+00 000 000 000</p></div><div><b>Newsletter</b><p>Stories, offers and inspiration.</p><input placeholder="Your email"></div></footer>
+
+<script type="module" src="script.js"></script>
+</body></html>
